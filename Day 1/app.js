@@ -1,0 +1,21 @@
+const card = require('./card');
+const user = require('./user');
+const shopping = require('./shopping');
+const course = require('./course');
+const find = require('./find');
+const welcome = require('./welcome');
+const async = require('./async');
+const merge = require('./merge');
+const arrow = require('./arrow');
+const api = require('./api');
+console.log(card());
+console.log(user());
+console.log(shopping());
+console.log(course("Node"));
+console.log(find(2));
+console.log(welcome("Titli"));
+async().then(user => console.log(user));
+console.log(merge());
+console.log(arrow(5, 3));
+api("admin@gmail.com", "12345")
+    .then(result => console.log(result));
