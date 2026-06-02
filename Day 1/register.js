@@ -1,9 +1,11 @@
-function registerUser(name, email) {
-    return {
-        name,
-        email,
-        message: "Registration Successful"
+const createAccount = (fullName, emailAddress) => {
+    const userDetails = {
+        username: fullName,
+        userEmail: emailAddress,
+        status: "Registration Successful"
     };
-}
 
-module.exports = registerUser;
+    return userDetails;
+};
+
+module.exports = createAccount;

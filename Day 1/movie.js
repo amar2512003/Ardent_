@@ -1,5 +1,7 @@
-function mp(ticketprice, quantity){
-    let totalprice = ticketprice * quantity;
-    return totalprice;
-}
-module.exports = mp;
+const calculateTicketCost = (pricePerTicket, ticketCount) => {
+    const finalAmount = pricePerTicket * ticketCount;
+
+    return finalAmount;
+};
+
+module.exports = calculateTicketCost;

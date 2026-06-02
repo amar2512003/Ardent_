@@ -1,6 +1,7 @@
-function tp(price, quantity){
-    let total = price * quantity;
-    return total;
-}
+const calculateOrderTotal = (unitPrice, itemCount) => {
+    const finalCost = unitPrice * itemCount;
 
-module.exports = tp;
+    return finalCost;
+};
+
+module.exports = calculateOrderTotal;

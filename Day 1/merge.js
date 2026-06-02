@@ -1,15 +1,20 @@
-const user = {
-    name: "Titli",
-    email: "titli@gmail.com"
+const basicDetails = {
+    fullName: "Amar",
+    emailAddress: "sinhaamar178@gmail.com"
 };
 
-const extraInfo = {
-    age: 21,
-    city: "Tarakeswar"
+const personalInfo = {
+    userAge: 22,
+    location: "Kolkata"
 };
 
-function mergeProfile() {
-    return { ...user, ...extraInfo };
-}
+const combineUserData = () => {
+    const completeProfile = {
+        ...basicDetails,
+        ...personalInfo
+    };
 
-module.exports = mergeProfile;
+    return completeProfile;
+};
+
+module.exports = combineUserData;

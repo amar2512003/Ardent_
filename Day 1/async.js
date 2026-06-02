@@ -1,9 +1,11 @@
-async function getUser() {
-    return {
-        id: 1,
-        name: "Titli",
-        email: "titli@gmail.com"
+const fetchUserProfile = async () => {
+    const userInfo = {
+        userId: 1,
+        fullName: "Amar",
+        userEmail: "sinhaamar178@gmail.com"
     };
-}
 
-module.exports = getUser;
+    return userInfo;
+};
+
+module.exports = fetchUserProfile;

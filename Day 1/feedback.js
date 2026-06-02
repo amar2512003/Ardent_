@@ -1,13 +1,14 @@
-const feedbacks = [];
+const customerReviews = [];
 
-function addfeedback(name, message) {
-    const feedback = {
-        name,
-        message
+const storeFeedback = (customerName, reviewText) => {
+    const reviewEntry = {
+        user: customerName,
+        feedback: reviewText
     };
 
-    feedbacks.push(feedback);
-    return feedbacks;
-}
+    customerReviews.push(reviewEntry);
 
-module.exports = addfeedback;
+    return customerReviews;
+};
+
+module.exports = storeFeedback;

@@ -1,11 +1,10 @@
-function ps(status) {
-    if (status === "success") {
-        return "Payment Successful";
-    } else if (status === "pending") {
-        return "Payment Pending";
-    } else {
-        return "Payment Failed";
-    }
-}
+const checkPaymentStatus = (paymentState) => {
+    const statusMessages = {
+        success: "Payment Successful",
+        pending: "Payment Pending"
+    };
 
-module.exports = ps;
+    return statusMessages[paymentState] || "Payment Failed";
+};
+
+module.exports = checkPaymentStatus;

@@ -1,11 +1,21 @@
-const products = [
-    { id: 1, name: "Laptop", price: 50000 },
-    { id: 2, name: "Mobile", price: 20000 },
-    { id: 3, name: "Headphones", price: 3000 }
+const inventoryItems = [
+    { productId: 1, productName: "Laptop", amount: 50000 },
+    { productId: 2, productName: "Mobile", amount: 20000 },
+    { productId: 3, productName: "Headphones", amount: 3000 }
 ];
 
-function findProduct(id) {
-    return products.find(product => product.id === id);
-}
+const getItemById = (searchId) => {
+    const item = inventoryItems.find(({ productId }) => productId === searchId);
 
-module.exports = findProduct;
+    if (!item) {
+        return undefined;
+    }
+
+    return {
+        id: item.productId,
+        name: item.productName,
+        price: item.amount
+    };
+};
+
+module.exports = getItemById;

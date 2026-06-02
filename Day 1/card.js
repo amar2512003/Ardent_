@@ -1,14 +1,16 @@
-const products = [
-    { name: "Laptop", price: 50000 },
-    { name: "Mobile", price: 20000 },
-    { name: "Headphones", price: 3000 }
+const inventory = [
+    { productName: "Laptop", cost: 50000 },
+    { productName: "Mobile", cost: 20000 },
+    { productName: "Headphones", cost: 3000 }
 ];
 
-function productCards() {
-    return products.map(product => ({
-        name: product.name,
-        price: product.price
-    }));
-}
+const generateProductList = () => {
+    return inventory.map(({ productName, cost }) => {
+        return {
+            name: productName,
+            price: cost
+        };
+    });
+};
 
-module.exports = productCards;
+module.exports = generateProductList;

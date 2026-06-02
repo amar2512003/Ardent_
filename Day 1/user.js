@@ -1,13 +1,21 @@
-const user = {
-    name: "Titli",
-    age: 21,
-    email: "titli@gmail.com"
+const profileData = {
+    fullName: "Amar",
+    userAge: 22,
+    contactEmail: "sinhaamar178@gmail.com"
 };
 
-function userProfile() {
-    const { name, age, email } = user;
+const getProfileInfo = () => {
+    const {
+        fullName,
+        userAge,
+        contactEmail
+    } = profileData;
 
-    return { name, age, email };
-}
+    return {
+        name: fullName,
+        age: userAge,
+        email: contactEmail
+    };
+};
 
-module.exports = userProfile;
+module.exports = getProfileInfo;

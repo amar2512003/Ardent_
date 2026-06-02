@@ -1,12 +1,16 @@
-function loginValidation(email, password) {
-    let validEmail = "a@gmail.com";
-    let validPassword = "12345";
+const authenticate = (userEmail, userPassword) => {
+    const credentials = {
+        email: "a@gmail.com",
+        password: "12345"
+    };
 
-    if (email === validEmail && password === validPassword) {
-        return "Login successful!";
-    } else {
-        return "login failed!";
-    }
-}
+    const isValidUser =
+        userEmail === credentials.email &&
+        userPassword === credentials.password;
 
-module.exports = loginValidation;
+    return isValidUser
+        ? "Login successful!"
+        : "login failed!";
+};
+
+module.exports = authenticate;

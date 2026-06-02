@@ -1,12 +1,15 @@
-function checkStock(product, stock){
-    if (stock > 10){
-        return "product is in stock";
-    } else if (stock > 0) {
-        return "product is low in stock";
-    }else {
-        return "product is out of stock";
+const verifyInventory = (itemName, availableUnits) => {
+    let stockStatus;
 
-    }
+    if (availableUnits <= 0) {
+        stockStatus = "product is out of stock";
+    } else if (availableUnits <= 10) {
+        stockStatus = "product is low in stock";
+    } else {
+        stockStatus = "product is in stock";
     }
 
-    module.exports = checkStock;
+    return stockStatus;
+};
+
+module.exports = verifyInventory;

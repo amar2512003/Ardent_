@@ -1,12 +1,16 @@
-const courses = [
+const availableCourses = [
     "React",
     "Node",
     "Python",
     "JavaScript"
 ];
 
-function filterCourses(keyword) {
-    return courses.filter(course => course.includes(keyword));
-}
+const searchCourses = (searchText) => {
+    const matchedCourses = availableCourses.filter((item) => {
+        return item.indexOf(searchText) !== -1;
+    });
 
-module.exports = filterCourses;
+    return matchedCourses;
+};
+
+module.exports = searchCourses;

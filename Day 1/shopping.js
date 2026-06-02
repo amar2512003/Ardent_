@@ -1,11 +1,15 @@
-const cart = [
-    { name: "Laptop", price: 50000 },
-    { name: "Mouse", price: 1000 },
-    { name: "Keyboard", price: 2000 }
+const shoppingItems = [
+    { product: "Laptop", cost: 50000 },
+    { product: "Mouse", cost: 1000 },
+    { product: "Keyboard", cost: 2000 }
 ];
 
-function cartTotal() {
-    return cart.reduce((total, item) => total + item.price, 0);
-}
+const calculateCartValue = () => {
+    const totalAmount = shoppingItems.reduce((sum, currentItem) => {
+        return sum + currentItem.cost;
+    }, 0);
 
-module.exports = cartTotal;
+    return totalAmount;
+};
+
+module.exports = calculateCartValue;

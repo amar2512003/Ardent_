@@ -1,10 +1,10 @@
-function trackOrder(status){
-    if (status ==="Shipped"){
-        return "Order has been shipped";
-    } else if (status ==="Delivered"){
-        return "Order has been delivered";
-    } else {
-        return "Invalid Order Status";
-    }
-}
-module.exports = trackOrder;
+const getOrderUpdate = (orderState) => {
+    const orderMessages = {
+        Shipped: "Order has been shipped",
+        Delivered: "Order has been delivered"
+    };
+
+    return orderMessages[orderState] || "Invalid Order Status";
+};
+
+module.exports = getOrderUpdate;

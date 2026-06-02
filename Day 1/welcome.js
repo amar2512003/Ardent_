@@ -1,5 +1,5 @@
-function welcomeUser(name) {
-    return "Welcome, " + name + "!";
-}
+const generateWelcomeMessage = (userName) => {
+    return `Welcome, ${userName}!`;
+};
 
-module.exports = welcomeUser;
+module.exports = generateWelcomeMessage;

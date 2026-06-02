@@ -1,13 +1,22 @@
-async function login(email, password) {
+const authenticateUser = async (userEmail, userPassword) => {
     try {
-        if (email === "admin@gmail.com" && password === "12345") {
-            return "Login Successful";
+        const validUser = {
+            email: "admin@gmail.com",
+            password: "12345"
+        };
+
+        const isAuthenticated =
+            userEmail === validUser.email &&
+            userPassword === validUser.password;
+
+        if (!isAuthenticated) {
+            throw new Error("Invalid Credentials");
         }
 
-        throw new Error("Invalid Credentials");
-    } catch (error) {
-        return error.message;
+        return "Login Successful";
+    } catch (err) {
+        return err.message;
     }
-}
+};
 
-module.exports = login;
+module.exports = authenticateUser;
